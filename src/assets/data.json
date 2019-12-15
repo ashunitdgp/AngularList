@@ -1,0 +1,62 @@
+[
+	{
+        "firstName": "ram",
+        "type": "0"
+	},
+	{
+		"firstName": "shyam",
+        "type": "0"
+        
+	},
+	{
+		"firstName": "roma",
+        "type": "1"
+	},
+	{
+		"firstName": "punit",
+        "type": "1"
+	},
+	{
+        "firstName": "rahul",
+        "type": "1"
+	},
+	{
+        "firstName": "sikha",
+        "type": "0"
+	},
+	{
+		"firstName": "reshma",
+        "type": "1"
+        
+	},
+	{
+        "firstName": "subhu",
+        "type": "0"
+	},
+	{
+		"firstName": "rohit",
+        "type": "0"
+        
+	},
+	{
+		"firstName": "amit",
+        "type": "1"
+	},
+	{
+		"firstName": "arjun",
+        "type": "1"
+	},
+	{
+        "firstName": "megha",
+        "type": "0"
+	},
+	{
+        "firstName": "subham",
+        "type": "1"
+	},
+	{
+		"firstName": "nadir",
+        "type": "1"
+        
+	}
+]

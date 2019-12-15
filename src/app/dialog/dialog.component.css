@@ -1,0 +1,12 @@
+h4{
+    margin-top: 5px;
+    display: inline-block;
+}
+.addbtn{
+float: right;
+}
+
+::ng-deep mat-dialog-content .mat-form-field{
+    display: inline-block;
+    margin-right: 27px;
+}

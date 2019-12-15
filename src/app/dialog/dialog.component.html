@@ -1,0 +1,50 @@
+<div mat-dialog-title><h4 >Add New User</h4>
+  <button class="addbtn" mat-raised-button color="primary" type="button" (click)="addRow()">
+    Add 
+    <mat-icon   >
+      add
+    </mat-icon>
+  </button></div>
+<mat-dialog-content>
+  <form [formGroup]="dynamicForm">
+    <div formArrayName="filters">
+      <div *ngFor="let filter of filtersFormArray.controls; let i = index;">
+
+        <div [formGroupName]="i" class="container">
+
+          <mat-form-field appearance="outline">
+            <mat-select  placeholder="Select User Type" formControlName="filterType">
+              <mat-option *ngFor="let filterType of filterTypes" [value]="filterType">
+                {{ filterType }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+
+
+          </mat-form-field>
+
+
+          <button mat-icon-button *ngIf='i != 0' >
+          <mat-icon color="warn"  (click)="removeRow(i)">
+            delete
+          </mat-icon>
+          </button>
+
+        </div>
+      </div>
+
+      
+
+
+
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button color="warn" mat-dialog-close>close</button>
+  <button mat-raised-button color="primary" [disabled]="dynamicForm.invalid || filtersFormArray.controls.length < 1" (click)="save()">submit</button>
+</mat-dialog-actions>

@@ -1,0 +1,39 @@
+.userList{
+  display:flex;
+  justify-content: center;
+
+}
+::ng-deep .mat-tab-label-active{
+    background-color: green;
+    color: #fff;
+}
+::ng-deep .mat-tab-labels{
+    background-color: #cecdcd !important;
+    color: #fff;
+} 
+::ng-deep .mat-tab-label{
+    opacity: 1 !important;
+} 
+
+::ng-deep .mat-form-field-infix{
+    width:320px !important;
+  }
+  .userlists{
+      text-align: center;
+      margin-bottom: 20px;
+  }
+  .userlists h1{
+      text-decoration: underline;
+      font-weight: bold;
+  }
+  .sorting{
+margin-top: 10px;
+  }
+  .sorting button{
+      float: right;
+      height: 32px;
+  }
+  .sorting span{
+    font-size: 24px;
+    font-weight: bold;
+}

@@ -1,0 +1,47 @@
+<div class="userlists">
+  <h1>User List</h1><button mat-raised-button color="accent" (click)="openDialog()">Add New User</button>
+</div>
+<div class="userList">
+
+  <mat-tab-group animationDuration="1000ms">
+
+    <mat-tab label="Customer">
+      <div class="sorting"><span>sort</span> <button mat-raised-button color="accent"
+          (click)="setOrder('coustemerList')">
+          <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span>
+        </button> </div>
+      <mat-form-field class="example-full-width">
+        <mat-label>Search</mat-label>
+        <input matInput [(ngModel)]="searchText" autocomplete="off" width="200px">
+      </mat-form-field>
+      <mat-list role="list">
+
+        <div *ngFor="let person of coustemerList | filter:searchText | orderBy: order:reverse:'case-insensitive'">
+          <mat-list-item role="listitem">{{person}}</mat-list-item>
+          <mat-divider></mat-divider>
+        </div>
+
+      </mat-list>
+    </mat-tab>
+    <mat-tab label="Client" color="primary">
+      <div class="sorting"><span>sort</span> <button mat-raised-button color="accent"
+          (click)="setClientOrder('clientList')">
+          <span [hidden]="clientReverse">▼</span><span [hidden]="!clientReverse">▲</span>
+        </button> </div>
+      <mat-form-field class="example-full-width">
+        <mat-label>Search</mat-label>
+        <input matInput [(ngModel)]="searchTexts" autocomplete="off" width="200px">
+      </mat-form-field>
+      <mat-list role="list">
+
+        <div
+          *ngFor="let persons of clientList | filter:searchTexts | orderBy: orderClient:clientReverse:'case-insensitive'">
+          <mat-list-item role="listitem">{{persons}}</mat-list-item>
+          <mat-divider></mat-divider>
+        </div>
+
+      </mat-list>
+    </mat-tab>
+
+  </mat-tab-group>
+</div>
